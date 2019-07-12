@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_learn/FunctionListPage.dart';
 
+import 'home/ScaffoldRoute.dart';
+
 void main() {
-  debugPaintSizeEnabled=true;
+  debugPaintSizeEnabled = false;
   runApp(new MyApp());
 }
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.lightBlue[800],
         accentColor: Colors.cyan[600],
       ),
-      home: new FunListPage(),
+      home: new ScaffoldRoute(),
     );
   }
 }

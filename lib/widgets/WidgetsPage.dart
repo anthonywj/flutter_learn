@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'basics/BasicListPage.dart';
+import 'basics/WidgetLifecyclePage.dart';
+
 class WidgetsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _WidgetPageState();
@@ -8,7 +11,7 @@ class WidgetsPage extends StatefulWidget {
 class _WidgetPageState extends State<WidgetsPage>
     with SingleTickerProviderStateMixin {
   TabController _tabController; //需要定义一个Controller
-  List tabs = ["基础", "布局", "容器", "可滚动", "功能","事件处理","自定义"];
+  List tabs = ["基础", "布局", "容器", "可滚动", "功能", "事件处理", "自定义"];
 
   @override
   void initState() {
@@ -29,9 +32,10 @@ class _WidgetPageState extends State<WidgetsPage>
       body: TabBarView(
         controller: _tabController,
         children: tabs.map((f) {
-          return Center(
-            child: Text(f),
-          );
+          if(f == "基础"){
+            return BasicListPage();
+          }
+          return new WidgetLifecyclePage();
         }).toList(),
       ),
     );

@@ -10,7 +10,7 @@ class ScaffoldRoute extends StatefulWidget {
 
 //首页
 class _ScaffoldRouteState extends State<ScaffoldRoute> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
 
   var _pageList;
 

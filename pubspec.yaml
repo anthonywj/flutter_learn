@@ -58,3 +58,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies, 
   # see https://flutter.io/custom-fonts/#from-packages
+  fonts:
+  - family: Hanalei
+    fonts:
+    - asset: assets/fonts/Hanalei-Regular.ttf
+  - family: BungeeOutline
+    fonts:
+    - asset: assets/fonts/BungeeOutline-Regular.ttf

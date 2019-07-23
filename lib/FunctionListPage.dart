@@ -8,13 +8,10 @@ import 'package:flutter_learn/cart/Product.dart';
 import 'package:flutter_learn/cart/ShoppingListPage.dart';
 import 'package:flutter_learn/images/HorizontalList.dart';
 import 'package:flutter_learn/images/ImageDemoPage.dart';
-import 'package:flutter_learn/images/ListsImages.dart';
+import 'package:flutter_learn/widgets/basics/ListsImages.dart';
 import 'package:flutter_learn/images/MultipleListPage.dart';
 import 'package:flutter_learn/layout/LayoutPage.dart';
 import 'package:flutter_learn/net/HttpGetPage.dart';
-import 'package:flutter_learn/state/ParentWidget.dart';
-import 'package:flutter_learn/state/ParentWidgetC.dart';
-import 'package:flutter_learn/state/TapboxA.dart';
 
 class FunListPage extends StatelessWidget {
   @override
@@ -51,9 +48,6 @@ class FunListPage extends StatelessWidget {
     pages.add(new PageBean("SlideDismissPage", new SlideDismissPage()));
     pages.add(new PageBean("HttpGetPage", new HttpGetPage()));
     pages.add(new PageBean("LayoutPage", new LayoutPage()));
-    pages.add(new PageBean("ParentWidget", new ParentWidget()));
-    pages.add(new PageBean("TapboxA", new TapboxA()));
-    pages.add(new PageBean("ParentWidgetC", new ParentWidgetC()));
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("功能列表"),

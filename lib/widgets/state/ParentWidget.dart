@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/state/TapboxC.dart';
 
-class ParentWidgetC extends StatefulWidget {
+import 'TapboxB.dart';
+
+class ParentWidget extends StatefulWidget {
   @override
   _ParentWidgetState createState() => new _ParentWidgetState();
 }
 
-class _ParentWidgetState extends State<ParentWidgetC> {
+class _ParentWidgetState extends State<ParentWidget> {
   bool _active = false;
 
   void _handleTapboxChanged(bool newValue) {
@@ -18,7 +19,7 @@ class _ParentWidgetState extends State<ParentWidgetC> {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      child: new TapboxC(
+      child: new TapboxB(
         active: _active,
         onChanged: _handleTapboxChanged,
       ),

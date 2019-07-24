@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'TextFormPage.dart';
+
 class TextFieldPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -98,6 +100,7 @@ class _TextFieldPage extends State<TextFieldPage> {
                 ],
               );
             }),
+            //自定义输入框样式
             Theme(
                 data: Theme.of(context).copyWith(
                     hintColor: Colors.grey[200], //定义下划线颜色
@@ -114,7 +117,7 @@ class _TextFieldPage extends State<TextFieldPage> {
                           hintText: "用户名或邮箱",
                           prefixIcon: Icon(Icons.person),
                           border: InputBorder.none //隐藏下划线
-                      ),
+                          ),
                     ),
                     TextField(
                       decoration: InputDecoration(
@@ -125,9 +128,17 @@ class _TextFieldPage extends State<TextFieldPage> {
                               TextStyle(color: Colors.grey, fontSize: 13.0)),
                       obscureText: true,
                     )
-
                   ],
                 )),
+            RaisedButton(
+              child: Text("表单提交"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => TextFormPage()));
+              },
+            ),
           ],
         ),
       ),

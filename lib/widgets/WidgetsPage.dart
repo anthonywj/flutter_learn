@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'basics/BasicListPage.dart';
 import 'basics/WidgetLifecyclePage.dart';
+import 'container/ContainerListPage.dart';
+import 'layout/LayoutListPage.dart';
 
 class WidgetsPage extends StatefulWidget {
   @override
@@ -32,9 +34,18 @@ class _WidgetPageState extends State<WidgetsPage>
       body: TabBarView(
         controller: _tabController,
         children: tabs.map((f) {
-          if(f == "基础"){
-            return BasicListPage();
+          switch (f) {
+            case "基础":
+              return BasicListPage();
+              break;
+            case "布局":
+              return LayoutListPage();
+              break;
+            case "容器":
+              return ContainerListPage();
+              break;
           }
+
           return new WidgetLifecyclePage();
         }).toList(),
       ),
